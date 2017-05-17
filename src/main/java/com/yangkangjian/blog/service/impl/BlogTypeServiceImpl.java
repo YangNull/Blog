@@ -10,9 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * ��������Serviceʵ����
- *
- * @author Administrator
+ * 博客类型Service实现类
  */
 @Service("blogTypeService")
 public class BlogTypeServiceImpl implements BlogTypeService {
@@ -43,5 +41,4 @@ public class BlogTypeServiceImpl implements BlogTypeService {
     public Integer delete(Integer id) {
         return blogTypeDao.delete(id);
     }
-
 }

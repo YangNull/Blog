@@ -4,21 +4,19 @@ package com.yangkangjian.blog.service;
 import com.yangkangjian.blog.entity.Blogger;
 
 /**
- * ����Service�ӿ�
- *
- * @author java1234_С��
+ * 博主Service接口
  */
 public interface BloggerService {
 
     /**
-     * ��ѯ������Ϣ
+     * 查询博主信息
      *
      * @return
      */
     public Blogger find();
 
     /**
-     * ͨ���û�����ѯ�û�
+     * 通过用户名查询用户
      *
      * @param userName
      * @return
@@ -26,10 +24,11 @@ public interface BloggerService {
     public Blogger getByUserName(String userName);
 
     /**
-     * ���²�����Ϣ
+     * 更新博主信息
      *
      * @param blogger
      * @return
      */
     public Integer update(Blogger blogger);
 }
+

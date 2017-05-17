@@ -7,50 +7,56 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * ��������Service�ӿ�
- * @author Administrator
+ * 博客类型Service接口
  *
+ * @author Administrator
  */
 public interface BlogTypeService {
 
-	/**
-	 * ��ѯ���в������� �Լ���Ӧ�Ĳ�������
-	 * @return
-	 */
-	public List<BlogType> countList();
-	
-	/**
-	 * ��ҳ��ѯ���������Ϣ
-	 * @param map
-	 * @return
-	 */
-	public List<BlogType> list(Map<String, Object> map);
+    /**
+     * 查询所有博客类型 以及对应的博客数量
+     *
+     * @return
+     */
+    public List<BlogType> countList();
 
-	/**
-	 * ��ȡ�ܼ�¼��
-	 * @param map
-	 * @return
-	 */
-	public Long getTotal(Map<String, Object> map);
-	
-	/**
-	 * ��Ӳ��������Ϣ
-	 * @param blogType
-	 * @return
-	 */
-	public Integer add(BlogType blogType);
-	
-	/**
-	 * �޸Ĳ��������Ϣ
-	 * @param blogType
-	 * @return
-	 */
-	public Integer update(BlogType blogType);
-	
-	/**
-	 * ɾ�����������Ϣ
-	 * @param id
-	 * @return
-	 */
-	public Integer delete(Integer id);
+    /**
+     * 分页查询博客类别信息
+     *
+     * @param map
+     * @return
+     */
+    public List<BlogType> list(Map<String, Object> map);
+
+    /**
+     * 获取总记录数
+     *
+     * @param map
+     * @return
+     */
+    public Long getTotal(Map<String, Object> map);
+
+    /**
+     * 添加博客类别信息
+     *
+     * @param blogType
+     * @return
+     */
+    public Integer add(BlogType blogType);
+
+    /**
+     * 修改博客类别信息
+     *
+     * @param blogType
+     * @return
+     */
+    public Integer update(BlogType blogType);
+
+    /**
+     * 删除博客类别信息
+     *
+     * @param id
+     * @return
+     */
+    public Integer delete(Integer id);
 }

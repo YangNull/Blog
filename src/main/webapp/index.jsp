@@ -1,5 +1,4 @@
-<html>
-<body>
-<h2>Hello World!</h2>
-</body>
-</html>
+<%@page language="java" pageEncoding="utf-8" contentType="text/html; utf-8" %>
+<%
+    response.sendRedirect("index.html");
+%>

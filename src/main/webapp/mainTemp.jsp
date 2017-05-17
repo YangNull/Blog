@@ -7,22 +7,22 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>${pageTitle }-Powered by java1234</title>
+    <title>${pageTitle}</title>
 
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/bootstrap3/css/bootstrap.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/bootstrap3/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/blog.css">
-    <link href="http://blog.java1234.com/favicon.ico" rel="SHORTCUT ICON">
+    <link href="/favicon.ico" rel="SHORTCUT ICON">
     <script src="${pageContext.request.contextPath}/static/bootstrap3/js/jquery-1.11.2.min.js"></script>
     <script src="${pageContext.request.contextPath}/static/bootstrap3/js/bootstrap.min.js"></script>
 
     <script>
-        var _hmt = _hmt || [];
+        //var _hmt = _hmt || [];
         (function () {
-            var hm = document.createElement("script");
-            hm.src = "//hm.baidu.com/hm.js?aa5c701f4f646931bf78b6f40b234ef5";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
+            //var hm = document.createElement("script");
+            //hm.src = "//hm.baidu.com/hm.js?aa5c701f4f646931bf78b6f40b234ef5";
+            //var s = document.getElementsByTagName("script")[0];
+            //s.parentNode.insertBefore(hm, s);
         })();
     </script>
 
@@ -53,8 +53,8 @@
                 <div class="user_image">
                     <img src="${pageContext.request.contextPath}/static/userImages/${blogger.imageName }"/>
                 </div>
-                <div class="nickName">${blogger.nickName }</div>
-                <div class="userSign">(${blogger.sign })</div>
+                <div class="nickName">${blogger.nickName}</div>
+                <div class="userSign">(${blogger.sign})</div>
             </div>
 
             <div class="data_list">
@@ -65,8 +65,10 @@
                 <div class="datas">
                     <ul>
                         <c:forEach var="blogTypeCount" items="${blogTypeCountList }">
-                            <li><span><a
-                                    href="${pageContext.request.contextPath}/index.html?typeId=${blogTypeCount.id }">${blogTypeCount.typeName }(${blogTypeCount.blogCount })</a></span>
+                            <li>
+                                <span>
+                                <a href="${pageContext.request.contextPath}/index.html?typeId=${blogTypeCount.id }">${blogTypeCount.typeName }(${blogTypeCount.blogCount })</a>
+                                </span>
                             </li>
                         </c:forEach>
                     </ul>
@@ -102,10 +104,7 @@
                     </ul>
                 </div>
             </div>
-
         </div>
-
-
     </div>
 
     <jsp:include page="/foreground/common/foot.jsp"/>

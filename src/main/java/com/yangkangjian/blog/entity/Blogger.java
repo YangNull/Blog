@@ -1,19 +1,17 @@
 package com.yangkangjian.blog.entity;
 
 /**
- * ����ʵ��
- *
- * @author java1234_С��
+ * 博主实体
  */
 public class Blogger {
 
-    private Integer id; // ���
-    private String userName; // �û���
-    private String password; // ����
-    private String nickName; // �ǳ�
-    private String sign; // ����ǩ��
-    private String proFile; // ���˼��
-    private String imageName; // ����ͷ��
+    private Integer id; // 编号
+    private String userName; // 用户名
+    private String password; // 密码
+    private String nickName; // 昵称
+    private String sign; // 个性签名
+    private String proFile; // 个人简介
+    private String imageName; // 博主头像
 
     public Integer getId() {
         return id;
@@ -70,6 +68,4 @@ public class Blogger {
     public void setImageName(String imageName) {
         this.imageName = imageName;
     }
-
-
 }

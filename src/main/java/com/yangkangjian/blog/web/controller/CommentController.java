@@ -1,4 +1,4 @@
-package com.yangkangjian.blog.controller;
+package com.yangkangjian.blog.web.controller;
 
 import com.yangkangjian.blog.entity.Blog;
 import com.yangkangjian.blog.entity.Comment;

@@ -1,4 +1,4 @@
-package com.yangkangjian.blog.controller;
+package com.yangkangjian.blog.web.controller;
 
 import com.yangkangjian.blog.entity.Blog;
 import com.yangkangjian.blog.entity.PageBean;
@@ -22,6 +22,7 @@ import java.util.Map;
 
 /**
  * index
+ *
  * @author Administrator
  */
 @Controller
@@ -49,19 +50,19 @@ public class IndexController {
         map.put("typeId", typeId);
         map.put("releaseDateStr", releaseDateStr);
         List<Blog> blogList = blogService.list(map);
-        for (Blog blog : blogList) {
-            List<String> imagesList = blog.getImagesList();
-            String blogInfo = blog.getContent();
-            Document doc = Jsoup.parse(blogInfo);
-            Elements jpgs = doc.select("img[src$=.jpg]");
-            for (int i = 0; i < jpgs.size(); i++) {
-                Element jpg = jpgs.get(i);
-                imagesList.add(jpg.toString());
-                if (i == 2) {
-                    break;
-                }
-            }
-        }
+//        for (Blog blog : blogList) {
+//            List<String> imagesList = blog.getImagesList();
+//            String blogInfo = blog.getContent();
+//            Document doc = Jsoup.parse(blogInfo);
+//            Elements jpgs = doc.select("img[src$=.jpg]");
+//            for (int i = 0; i < jpgs.size(); i++) {
+//                Element jpg = jpgs.get(i);
+//                imagesList.add(jpg.toString());
+//                if (i == 2) {
+//                    break;
+//                }
+//            }
+//        }
         mav.addObject("blogList", blogList);
         StringBuffer param = new StringBuffer();
         if (StringUtil.isNotEmpty(typeId)) {

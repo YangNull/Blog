@@ -17,12 +17,13 @@
                     <span class="title"><a
                             href="${pageContext.request.contextPath}/blog/articles/${blog.id}.html">${blog.title }</a></span>
                     <span class="summary">摘要: ${blog.summary }...</span>
-                    <span class="img">
+                <%--
+                     <span class="img">
 				  		<c:forEach var="image" items="${blog.imagesList }">
                             <a href="${pageContext.request.contextPath}/blog/articles/${blog.id}.html">${image }</a>
                             &nbsp;&nbsp;
                         </c:forEach>
-				  	</span>
+				  	</span>--%>
                     <span class="info">发表于 <fmt:formatDate value="${blog.releaseDate }" type="date"
                                                            pattern="yyyy-MM-dd HH:mm"/> 阅读(${blog.clickHit}) 评论(${blog.replyHit}) </span>
                 </li>

@@ -3,21 +3,16 @@ package com.yangkangjian.blog.entity;
 import java.io.Serializable;
 
 /**
- * ��������ʵ��
- *
- * @author Administrator
+ * 博客类型实体
  */
 public class BlogType implements Serializable {
 
-    /**
-     *
-     */
     private static final long serialVersionUID = 1L;
 
-    private Integer id;  // ���
-    private String typeName; // ������������
-    private Integer blogCount; // ����
-    private Integer orderNo; // ����  ��С����������ʾ
+    private Integer id;  // 编号
+    private String typeName; // 博客类型名称
+    private Integer blogCount; // 数量
+    private Integer orderNo; // 排序  从小到大排序显示
 
     public Integer getId() {
         return id;
@@ -50,6 +45,4 @@ public class BlogType implements Serializable {
     public void setOrderNo(Integer orderNo) {
         this.orderNo = orderNo;
     }
-
-
 }
